@@ -4,6 +4,7 @@
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --primary-bg-color: #ffffff;
+  --elements-bg-color: #f5f4fa;
   --secondary-bg-color: #eeeeee;
   --footer-bg-color: #2f303a;
   --button-bg-color: #f5f4fa;
@@ -173,13 +174,25 @@ p {
 }
 
 /* секція Hero */
-.hero {
-  background-color: #2f303a;
+
+.section.hero {
   padding-top: 200px;
   padding-bottom: 200px;
+  max-width: 1600px;
+  height: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #c4c4c4;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/hero-bg-img.jpg');
+
+  background-color: #c4c4c4;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.hero .title {
+.hero.title {
   color: #ffffff;
 
   font-weight: 900;
@@ -227,6 +240,14 @@ p {
   justify-content: space-between;
 }
 
+.features .thumb {
+  display: block;
+  text-align: center;
+  background: var(--elements-bg-color);
+  padding: 25px 0px;
+  margin-bottom: 30px;
+}
+
 .features-list .item {
   width: 270px;
 }
@@ -247,7 +268,8 @@ p {
 
 /* секція Our Works */
 .our-works .title,
-.team .title {
+.team .title,
+.clients .title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -265,7 +287,7 @@ p {
 /* секція Team */
 
 .team {
-  background-color: var(--button-bg-color);
+  background-color: var(--elements-bg-color);
 }
 
 .team-list {
@@ -284,7 +306,7 @@ p {
 }
 
 .team-descr {
-  padding: 30px 0px ;
+  padding: 30px 0px;
 }
 
 .team-mbr .title {
@@ -302,6 +324,8 @@ p {
   text-align: center;
 }
 
+/* секція Clients */
+
 /* оформлення footer */
 
 .bottom {
@@ -311,7 +335,7 @@ p {
   background-color: var(--footer-bg-color);
 }
 
-.bottom .container{
+.bottom .container {
   display: block;
   text-align: left;
 }
@@ -403,9 +427,16 @@ p {
 }
 
 .project-item {
+  cursor: pointer;
+
   flex-basis: calc(100% / 3 - var(--project-item-gap));
   margin-left: var(--project-item-gap);
   margin-top: var(--project-item-gap);
+}
+
+.project-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .projects-list .title {
