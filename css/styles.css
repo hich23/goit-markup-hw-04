@@ -406,8 +406,7 @@ p {
 
 .clients .icon {
   fill: currentColor;
-  width: 100%;
-    height: 100%;
+  
 }
 /* оформлення footer */
 /* оформлення adress-block */
@@ -421,7 +420,7 @@ p {
 .bottom .container {
   display: flex;
   text-align: left;
-  align-items: center;
+  align-items: baseline;
 }
 
 .logo-footer {
@@ -469,7 +468,6 @@ p {
 .social-block {
   display: block;
   width: 206px;
-  padding: 12px 0px 40px 0px;
 }
 
 .social-block .text {
@@ -513,9 +511,7 @@ p {
 .social-block .link:focus {
   background-color: var(--accent-color);
   border-radius: 50%;
-
 }
-
 
 .social-block .icon {
   fill: currentColor;
@@ -580,7 +576,11 @@ p {
   margin-top: var(--project-item-gap);
 }
 
-.project-item:hover {
+.project-item .link {
+  display: block;
+}
+
+.project-item .link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
